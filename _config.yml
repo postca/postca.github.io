@@ -37,7 +37,7 @@ gitalk:
   # replace all of those below with your own
   client_id: a9e60308f00d4f50c0a2
   client_secret: af1124f1579da047b071f58a86a9b70c4c172351
-  repo: unifreak.github.io
+  repo: postca.github.io
   owner: unifreak
   admin: unifreak
   distraction_free_mode: true
