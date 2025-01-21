@@ -7,9 +7,13 @@
   {% for post in site.posts limit:1 %}
     <div class="popular-post post big-post item-0">
       <a class="entry-image-wrap is-image" href="{{ post.url }}" title="{{ post.title }}">
-                    {% if post.image %}
-            <span class="entry-thumb lazy-ify" data-image="{{ site.baseurl }}/{{ post.image }}" style="background-image:url({{ site.baseurl }}/{{ post.image }})"></span>
-            {% endif %}
+{% if post.optimized_image %}
+<span class="entry-thumb lazy-ify" data-image="{{ post.optimized_image }}" style="background-image:url({{ post.optimized_image }})"></span>
+{% elsif post.image %}
+<span class="entry-thumb lazy-ify" data-image="{{ post.image }}" style="background-image:url({{ post.image }})"></span>
+{% else %}
+<span class="entry-thumb lazy-ify" data-image="/assets/img/off.jpg" style="background-image:url(/assets/img/off.png)"></span>
+{% endif %}
       </a>
       <div class="entry-header">
         <span class="entry-category">{{ post.categories | join: ', ' }}</span>
