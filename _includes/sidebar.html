@@ -48,4 +48,6 @@
   </div>
 </div>
 
-{% include ads/sidebar-ads.html %}
+{% if page.url == '/' or page.url contains '/posts/' %}
+  {% include ads/sidebar-ads.html %}
+{% endif %}
