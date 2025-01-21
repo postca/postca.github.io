@@ -27,6 +27,7 @@ shout: # Required: **TWO** lines, will be displayed on page's header.
   -
   -
 description: "unifreak's blog." # Required
+logo: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi6nBYYJpRz06XZDLKmLLPogN-k0NQdROU7w4XBaVBWWdRLQZrRmqdUHcqmqAFqXpqPfx6OK7mUg74T_8Yms19n5OT9N6FGprDGKWkWU-Am6P8svKFWg77TTdeSy8lLNOlXkGh2BUPuUIE6/s1600/supermag.png'
 
 disqus:
   comments: false # Global toggle on/off disqus comment
