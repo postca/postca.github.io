@@ -11,19 +11,18 @@
   like resume
 -->
 {% unless layout.bare %}
+  
 {% include google_analytics.html %}
+  
+{% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
 <body class="{{ layout }} is-multiple is-boxed">
+  <div id='outer-wrapper'>
     {% include header.html %}
 
-    <section id="l-main">
-      <div class="container">
-        {% include search_result.html %}
-        {{ content }}
-      </div>
-    </section>
+
 
     {% include footer.html %}
-
+</div>
 
 <script src="{{ site.baseurl }}/assets/js/alltheme.js"></script> 
 
