@@ -24,9 +24,9 @@
     {% include footer.html %}
 </div>
 
-<script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>  
-<script src="{{ site.baseurl }}/assets/js/theia-sticky-sidebar.min.js"></script>  
-<script src="{{ site.baseurl }}/assets/js/alltheme.js"></script>
+<script type="text/javascript" src="{{ '/assets/js/jquery.min.js' | relative_url }}"></script>
+<script type="text/javascript" src="{{ '/assets/js/theia-sticky-sidebar.min.js' | relative_url }}"></script> 
+<script type="text/javascript" src="{{ '/assets/js/alltheme.js' | relative_url }}"></script>
 <script>
  $(document).ready(function() { function fixedSidebarIfy() { $("#main-wrapper, #sidebar-wrapper").each(function() { $(this).theiaStickySidebar({ containerSelector: "#content-wrapper > .container", additionalMarginTop: 20, additionalMarginBottom: 20 }); }); } fixedSidebarIfy(); });
 </script>
