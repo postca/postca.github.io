@@ -1,51 +1,17 @@
 <div class="about-author">
   <div class="avatar-container">
-    <span class="author-avatar lazy-ify" 
-          data-image="{{ site.baseurl }}/{{ site.data.authors[page.author].avatar }}" 
-          style="background-image:url({{ site.baseurl }}/{{ site.data.authors[page.author].avatar }})">
-    </span>
+    <span class="author-avatar lazy-ify" data-image="{{ site.baseurl }}/{{ site.data.authors[page.author].avatar }}" style="background-image:url({{ site.baseurl }}/{{ site.data.authors[page.author].avatar }})"></span>
   </div>
   <div class="author-description">
     <span class="author-title">
-      <a alt="{{ site.data.authors[page.author].display_name }}" 
-         href="{{ site.data.authors[page.author].website }}" 
-         rel="noopener noreferrer" 
-         target="_blank">
-        {{ site.data.authors[page.author].display_name }}
-      </a>
+      <a alt="{{ site.data.authors[page.author].display_name }}" href="{{ site.data.authors[page.author].website }}" rel="noopener noreferrer" target="_blank">{{ site.data.authors[page.author].display_name }}</a>
     </span>
     <p class="author-text excerpt">{{ site.data.authors[page.author].bio }}</p>
     <ul class="author-links social social-color">
-      <li class="facebook">
-        <a href="https://facebook.com/{{ site.data.authors[page.author].facebook }}" 
-           title="facebook" 
-           rel="noopener noreferrer" 
-           target="_blank"></a>
-      </li>
-      <li class="twitter">
-        <a href="https://twitter.com/{{ site.data.authors[page.author].twitter }}" 
-           title="twitter" 
-           rel="noopener noreferrer" 
-           target="_blank"></a>
-      </li>
-      <li class="instagram">
-        <a href="https://www.instagram.com/{{ site.data.authors[page.author].instagram }}" 
-           title="instagram" 
-           rel="noopener noreferrer" 
-           target="_blank"></a>
-      </li>
-      <li class="youtube">
-        <a href="https://www.youtube.com/channel/{{ site.data.authors[page.author].youtube }}" 
-           title="youtube" 
-           rel="noopener noreferrer" 
-           target="_blank"></a>
-      </li>
-      <li class="external-link">
-        <a href="{{ site.data.authors[page.author].website }}" 
-           title="website" 
-           rel="noopener noreferrer" 
-           target="_blank"></a>
-      </li>
+      <li class="facebook"><a href="https://facebook.com/{{ site.data.authors[page.author].facebook }}" title="facebook" rel="noopener noreferrer" target="_blank"></a></li>
+      <li class="twitter"><a href="https://twitter.com/{{ site.data.authors[page.author].twitter }}" title="twitter" rel="noopener noreferrer" target="_blank"></a></li>
+      <li class="instagram"><a href="https://www.instagram.com/{{ site.data.authors[page.author].instagram }}" title="instagram" rel="noopener noreferrer" target="_blank"></a></li>
+      <li class="youtube"><a href="https://www.youtube.com/channel/{{ site.data.authors[page.author].youtube }}" title="youtube" rel="noopener noreferrer" target="_blank"></a></li>
     </ul>
   </div>
 </div>
