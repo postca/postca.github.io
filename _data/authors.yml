@@ -1,0 +1,9 @@
+authors:
+  - name: "Penulis Satu"
+    bio: "Bio penulis satu."
+    twitter: "penulissatu"
+    url: "https://example.com/penulissatu"
+  - name: "Penulis Dua"
+    bio: "Bio penulis dua."
+    twitter: "penulisdua"
+    url: "https://example.com/penulisdua"
