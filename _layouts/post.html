@@ -1,9 +1,12 @@
 ---
 layout: default
+disqus: false
 archive: false
 post_class: post-template
 ---
 
+<!-- Begin Article
+================================================== -->
 {% include ads/header-ads-wrap.html %}
 <div class="flex-center" id="content-wrapper" style="transform: none;"><div class="container row-x1" style="transform: none;">
 <!-- Post -->        
@@ -46,7 +49,19 @@ post_class: post-template
 </div>
 
 <footer class="post-footer">
-{% include author.html %}
+<!-- Author Box -->
+{% if page.author %}
+<div class="about-author">
+<div class="avatar-container">
+<span class="author-avatar lazy-ify" data-image="{{site.baseurl}}/{{author.avatar}}" style="background-image:url({{site.baseurl}}/{{author.avatar}})"></span>
+</div>
+<div class="author-description">
+<span class="author-title"><a alt="{{ author.display_name }}" href="{{ author.web }}" rel="noopener noreferrer" target="_blank">{{ author.display_name }}</a></span>
+<p class="author-text excerpt">{{ author.description }}</p>
+<ul class="author-links social social-color"><li class="facebook"><a href="https://facebook.com/templateify" title="facebook" rel="noopener noreferrer" target="_blank"></a></li><li class="twitter"><a href="https://twitter.com/templateify" title="twitter" rel="noopener noreferrer" target="_blank"></a></li><li class="instagram"><a href="https://www.instagram.com/templateifydotcom/" title="instagram" rel="noopener noreferrer" target="_blank"></a></li><li class="youtube"><a href="https://www.youtube.com/channel/UClJz6zSWfSpXIfhexg_CUzA?sub_confirmation=1" title="youtube" rel="noopener noreferrer" target="_blank"></a></li><li class="external-link"><a href="https://www.templateify.com/" title="external-link" rel="noopener noreferrer" target="_blank"></a></li></ul></div>
+</div>
+{% endif %}
+<!-- End Author Box -->
 <!-- Related Post -->
 	  {% assign size = site.related_posts | size %}
   {% if size != 0 %}
