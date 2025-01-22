@@ -1,4 +1,4 @@
-- name: "name1"
+- name: "Penulis Satu"
   display_name: "Penulis Satu"
   bio: "Bio penulis satu."
   twitter: "penulissatu"
@@ -7,7 +7,8 @@
   youtube: "penulissatu"
   website: "https://example.com/penulissatu"
   avatar: "assets/images/penulissatu.jpg"
-- name: "name2"
+
+- name: "Penulis Dua"
   display_name: "Penulis Dua"
   bio: "Bio penulis dua."
   twitter: "penulisdua"
