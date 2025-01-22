@@ -9,6 +9,16 @@ kramdown:
     css_class: 'highlight'
   math_engine: mathjax
 
+authors:
+  Summer:
+    name: Summer
+    display_name: Summer
+    avatar: 'assets/images/summer.jpg'
+    email: heysummerislive@gmail.com
+    web: https://poztxa.github.io
+    twitter: https://twitter.com/summerislive
+    description: "Digital Creator, Musician, Host, and Gamer"
+    
 plugins:
 - jekyll-paginate
 - jekyll-sitemap
