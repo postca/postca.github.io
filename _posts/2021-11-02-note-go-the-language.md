@@ -1,6 +1,7 @@
 ---
 title: Note - Go, The Language
 layout: post
+author: Summer
 category: notes
 tags: [go]
 excerpt: "Reading notes on Go language."
