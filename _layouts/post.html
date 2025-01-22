@@ -5,8 +5,7 @@ post_class: post-template
 ---
 
 {% include ads/header-ads-wrap.html %}
-<div class="row">
-  <div id="markdown-container" class="col-lg-9">
+<div class="flex-center" id="content-wrapper" style="transform: none;"><div class="container row-x1" style="transform: none;">
     <header>
       <p id="post-title">{{ page.title }}</p>
       {% if page.tags %}
@@ -32,11 +31,6 @@ post_class: post-template
     </header>
 
     {{ content | replace: "./img/", "/assets/img/" }}
-  </div>
-
-  <div id="markdown-outline" class="col-lg-3">
-  </div>
-
-</div>
+  </div></div>
 
 {% include ads/footer-ads-wrap.html %}
