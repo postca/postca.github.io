@@ -1,7 +1,7 @@
 ---
 title: "笔记 - 高性能 MySQL (第四版)"
 layout: post
-author: "Penulis Satu"
+author: Summer
 category: note
 tags: [mysql, sql, database, perf]
 
