@@ -1,6 +1,7 @@
 ---
 title: "笔记 - 高性能 MySQL (第四版)"
 layout: post
+author: "name2"
 category: note
 tags: [mysql, sql, database, perf]
 
