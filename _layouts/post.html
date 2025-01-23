@@ -3,8 +3,7 @@ layout: default
 markdown: true
 ---
 {% include ads/header-ads-wrap.html %}
-<div class="row">
-  <div id="markdown-container" class="col-lg-9">
+<div class="flex-center" id="content-wrapper" style="transform: none;"><div class="container row-x1" style="transform: none;">
     <header>
       <p id="post-title">{{ page.title }}</p>
       {% if page.tags %}
@@ -32,15 +31,5 @@ markdown: true
     {{ content | replace: "./img/", "/assets/img/" }}
   </div>
 
-  <div id="markdown-outline" class="col-lg-3">
-  </div>
-
-  {% if site.disqus.comments %}
-    {% include disqus.html %}
-  {% endif %}
-
-  {% if site.gitalk.comments %}
-    {% include gitalk.html %}
-  {% endif %}
 </div>
 {% include ads/footer-ads-wrap.html %}
