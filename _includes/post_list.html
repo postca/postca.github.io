@@ -1,9 +1,12 @@
-<div class="blog-posts hfeed index-post-wrap" id="post-list">
+{% if paginator %}
+    <div class="blog-posts hfeed index-post-wrap" id="post-list">
         {% for post in paginator.posts %}
             {% include post_list_item.html %}
         {% endfor %}
     </div>
+{% endif %}
 
+{% if paginator %}
 <div class='blog-pager' id='blog-pager'>
   {% if paginator.next_page %}
     <a class='blog-pager-older-link btn load-more' href='{{ paginator.next_page_path | relative_url }}' id='supermag-pro-load-more-link'>
@@ -15,3 +18,4 @@
     <span class='no-more btn load-more show'>That is All</span>
   {% endif %}
 </div>
+{% endif %}
