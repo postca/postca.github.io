@@ -15,7 +15,6 @@ permalink: /note/
   {% endfor %}
     </div>
 
-{% if paginator %}
 <div class='blog-pager' id='blog-pager'>
   {% if paginator.next_page %}
     <a class='blog-pager-older-link btn load-more' href='{{ paginator.next_page_path | relative_url }}' id='supermag-pro-load-more-link'>
