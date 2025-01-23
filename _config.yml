@@ -1,5 +1,6 @@
 highlighter: rouge
-
+url: "https://poztxa.github.io"
+baseurl: ""
 markdown: kramdown
 
 kramdown:
