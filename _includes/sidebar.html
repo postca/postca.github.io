@@ -51,3 +51,7 @@
 {% if page.url == '/' or page.url contains '/posts/' %}
   {% include ads/sidebar-ads.html %}
 {% endif %}
+
+{% if page.layout == "post" %}
+  {% include ads/sidebar-ads.html %}
+{% endif %}
