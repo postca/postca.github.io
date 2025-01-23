@@ -22,14 +22,6 @@ markdown: true
 </div>
 </div>
 
-      {% if page.tags %}
-      <ul class="tags clearfix">
-        {% for tag in page.tags %}
-        <li><i class="fa fa-tag"></i> {{ tag }}</li>
-        {% endfor %}
-      </ul>
-      {% endif %}
-
       <p id="post-meta">
       posted
       {% if page.date %}
@@ -46,6 +38,12 @@ markdown: true
 <div class="entry-content-wrap"><div class="post-body entry-content" id="post-body">
     {{ content | replace: "./img/", "/assets/img/" }}
 </div></div>
+      
+<div class="entry-labels"><span class="labels-label">Tags:</span>
+{% if page.tags %}{% for tag in page.tags %}
+<a class="label-link" href="{{ site.baseurl }}/tag/{{ tag | url_encode }}" rel="tag">{{ tag }}</a>
+{% endfor %}{% endif %}
+</div>
       
 <div class="post-nav">
 {% if page.previous.url %}<a class="post-nav-newer-link" href="{{page.previous.url | absolute_url}}" id="Blog1_post-nav-newer-link">Previous Post</a>{% endif %}
