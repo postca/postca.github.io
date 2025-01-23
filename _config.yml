@@ -25,13 +25,13 @@ plugins:
 - jekyll-feed
 - jekyll-seo-tag
 - jekyll-archives
+- jekyll-paginate-v2
 
 paginate: 7
 paginate_path: "page:num"
 layout: post
 permalink: /:categories/:title
 excerpt_separator: "[-----]"
-paginate_path: "/note/page:num/"
 
 url: # Required: replace this with your domain
 name: unifreak # Required: will be displayed on every page's header
