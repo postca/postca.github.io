@@ -30,7 +30,7 @@
     {% unless group_name == "collections" %}
       <section class="showcase col-lg-9 col-lg-offset-1 {% if groupIdx > 0 %} hide {% else %} current {% endif %}" data-show="{{ group | first }}">
         {% for posts in group %}
-            {% include post_list.html posts=posts groupIdx=groupIdx %}
+            {% include pos_tes.html posts=posts groupIdx=groupIdx %}
             {% assign groupIdx = groupIdx | plus: 1 %}
         {% endfor %}
       </section>
