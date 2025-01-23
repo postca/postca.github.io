@@ -27,15 +27,16 @@ markdown: true
         in series <b>{{ page.collection }}</b>
       {% endunless %}
       </p>
+
+
+    {{ content | replace: "./img/", "/assets/img/" }}
+      
 <div class="post-nav">
 {% if page.previous.url %}<a class="post-nav-newer-link" href="{{page.previous.url | absolute_url}}" id="Blog1_post-nav-newer-link">Previous Post</a>{% endif %}
 {% if page.next.url %}<a class="post-nav-older-link" href="{{page.next.url | absolute_url}}" id="Blog1_post-nav-older-link">Next Post</a>{% endif %}
 </div>
 </div></article>
-
-    {{ content | replace: "./img/", "/assets/img/" }}
-
-    </div></div></div></main>
+</div></div></div></main>
 
 <aside id="sidebar-wrapper"><div class="sidebar supermag-pro-widget-ready section" id="sidebar" name="Sidebar">{% include sidebar.html %}</div></aside>
     
