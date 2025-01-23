@@ -8,7 +8,7 @@ permalink: /note/
 
 {% if paginator %}
     <div class="blog-posts hfeed index-post-wrap" id="post-list">
-        {% for post in site.categories.note %}
+        {% for post in paginator.posts %}
             {% include post_list_item.html %}
         {% endfor %}
     </div>
@@ -23,3 +23,4 @@ permalink: /note/
         {% endif %}
     </div>
 {% endif %}
+
