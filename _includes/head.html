@@ -13,11 +13,6 @@
 <link rel="stylesheet" type="text/css" href="{{ '/assets/css/base.css' | relative_url }}">
 <link rel="stylesheet" type="text/css" href="{{ '/assets/css/simplePagination.css' | relative_url }}">
 
-{% if page.layout == "post" %}
-  <link rel="stylesheet" type="text/css" href="{{ '/assets/css/post.css' | relative_url }}">
-  <link rel="stylesheet" type="text/css" href="{{ '/assets/css/gitalk.css' | relative_url }}">
-{% endif %}
-
 {% for math in page.usemath %}
   {% if math == "latex" %}
     <!-- latex math support -->
