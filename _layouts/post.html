@@ -21,6 +21,29 @@ markdown: true
 </div>
 </div>
 </div>
+
+      {% if page.tags %}
+      <ul class="tags clearfix">
+        {% for tag in page.tags %}
+        <li><i class="fa fa-tag"></i> {{ tag }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+
+      <p id="post-meta">
+      posted
+      {% if page.date %}
+         on <b>{{ page.date | date_to_string }}</b>
+      {% endif %}
+      {% if page.categories[0] %}
+        under category <b>{{ page.categories | join: ", " }}</b>
+      {% endif %}
+      {% unless page.collection == 'posts'  %}
+        in series <b>{{ page.collection }}</b>
+      {% endunless %}
+      </p>
+    
+    
     {{ content | replace: "./img/", "/assets/img/" }}
       
 <div class="post-nav">
