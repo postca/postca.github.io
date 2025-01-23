@@ -22,18 +22,7 @@ markdown: true
 </div>
 </div>
 
-      <p id="post-meta">
-      posted
-      {% if page.date %}
-         on <b>{{ page.date | date_to_string }}</b>
-      {% endif %}
-      {% if page.categories[0] %}
-        under category <b>{{ page.categories | join: ", " }}</b>
-      {% endif %}
-      {% unless page.collection == 'posts'  %}
-        in series <b>{{ page.collection }}</b>
-      {% endunless %}
-      </p>
+
     
 <div class="entry-content-wrap"><div class="post-body entry-content" id="post-body">
     {{ content | replace: "./img/", "/assets/img/" }}
