@@ -43,8 +43,9 @@ markdown: true
       {% endunless %}
       </p>
     
-    
+<div class="entry-content-wrap"><div class="post-body entry-content" id="post-body">
     {{ content | replace: "./img/", "/assets/img/" }}
+</div></div>
       
 <div class="post-nav">
 {% if page.previous.url %}<a class="post-nav-newer-link" href="{{page.previous.url | absolute_url}}" id="Blog1_post-nav-newer-link">Previous Post</a>{% endif %}
