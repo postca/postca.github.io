@@ -12,30 +12,11 @@ pagination:
         <div class="widget Blog" data-version="2" id="Blog1">
           {% assign posts = paginator.posts %}
           {% assign category_name = "All Articles" %}
-          {% assign navigation = site.data.navigation %}
  
-          {% if page.url contains '/category/news/' %}
-            {% assign posts = paginator.posts | where_exp: "post", "post.categories contains 'news'" %}
-            {% assign category_name = "News Topics" %}
-          {% elsif page.url contains '/category/' %}
+          {% if page.url contains '/category/' %}
             {% assign category_segments = page.url | split: '/' %}
-            {% if category_segments.size > 2 %}
-              {% assign category_id = category_segments[2] %}
-              {% for nav_item in navigation %}
-                {% if nav_item.url contains category_id %}
-                  {% assign category_name = nav_item.title %}
-                {% endif %}
-              {% endfor %}
-              {% assign posts = paginator.posts | where_exp: "post", "post.categories contains category_id" %}
-              {% assign paginate_path = '/category/' | append: category_id | append: '/:num/' %}
-              {% assign first_page_path = '/category/' | append: category_id %}
-            {% else %}
-              {% assign paginate_path = '/posts/:num/' %}
-              {% assign first_page_path = '/posts/' %}
-            {% endif %}
-          {% else %}
-            {% assign paginate_path = '/posts/:num' %}
-            {% assign first_page_path = '/posts/' %}
+            {% assign category_id = category_segments[2] %}
+            {% assign posts = paginator.posts | where_exp: "post", "post.categories contains category_id" %}
           {% endif %}
 	
           <div class="queryMessage">
@@ -45,7 +26,7 @@ pagination:
           <div>
             {% if posts and posts.size > 0 %}
             <div class="blog-posts hfeed index-post-wrap" id="post-list">
-              {% for post in paginator.posts %}
+              {% for post in posts %}
               <article class="blog-post hentry index-post post-{{ forloop.index0 }}">
                 <a class="entry-image-wrap is-image" href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">
                   {% if post.image %}
@@ -64,9 +45,7 @@ pagination:
                   <div class="entry-meta">
                     <span class="entry-author">
                       <span class="by">by</span> 
-                      <span class="author-name">
-                        <a href="{{ '/author/' | append: post.author | append: '/index.html' | relative_url }}">{{ post.author }}</a>
-                      </span>
+                      <span class="author-name">{{ post.author }}</span>
                       <span class="entry-time">
                         <span class="on">-</span>
                         <time class="published" datetime="{{ post.date | date_to_string }}">{{ post.date | date_to_string }}</time>
