@@ -1,35 +1,25 @@
 highlighter: rouge
+
 markdown: kramdown
-url: "https://poztxa.github.io"
-baseurl: ""
+logo: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi6nBYYJpRz06XZDLKmLLPogN-k0NQdROU7w4XBaVBWWdRLQZrRmqdUHcqmqAFqXpqPfx6OK7mUg74T_8Yms19n5OT9N6FGprDGKWkWU-Am6P8svKFWg77TTdeSy8lLNOlXkGh2BUPuUIE6/s1600/supermag.png'
+
 kramdown:
   input: GFM # The default, can be omitted.
   syntax_highlighter: rouge
   syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
     css_class: 'highlight'
   math_engine: mathjax
-author: Summer
-authors:
-  Summer:
-    name: Summer
-    display_name: Summer
-    avatar: 'assets/img/summer.jpg'
-    email: heysummerislive@gmail.com
-    web: https://poztxa.github.io
-    twitter: https://twitter.com/summerislive
-    description: "Digital Creator, Musician, Host, and Gamer"
 
-  pagination:
-  enabled: true
-  per_page: 5
-  
 plugins:
-- jekyll-paginate-v2
-- jekyll-auto-authors
-- jekyll-sitemap
-- jekyll-feed
-- jekyll-seo-tag
-- jekyll-archives
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+
+paginate: 7
+paginate_path: "page:num"
+layout: post
+permalink: /:categories/:title
+excerpt_separator: "[-----]"
 
 url: # Required: replace this with your domain
 name: unifreak # Required: will be displayed on every page's header
@@ -38,7 +28,6 @@ shout: # Required: **TWO** lines, will be displayed on page's header.
   -
   -
 description: "unifreak's blog." # Required
-logo: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi6nBYYJpRz06XZDLKmLLPogN-k0NQdROU7w4XBaVBWWdRLQZrRmqdUHcqmqAFqXpqPfx6OK7mUg74T_8Yms19n5OT9N6FGprDGKWkWU-Am6P8svKFWg77TTdeSy8lLNOlXkGh2BUPuUIE6/s1600/supermag.png'
 
 disqus:
   comments: false # Global toggle on/off disqus comment
@@ -49,7 +38,7 @@ gitalk:
   # replace all of those below with your own
   client_id: a9e60308f00d4f50c0a2
   client_secret: af1124f1579da047b071f58a86a9b70c4c172351
-  repo: postca.github.io
+  repo: unifreak.github.io
   owner: unifreak
   admin: unifreak
   distraction_free_mode: true
