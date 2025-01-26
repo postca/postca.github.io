@@ -1,8 +1,7 @@
 highlighter: rouge
 markdown: kramdown
 url: "https://poztxa.github.io"
-#baseurl: "/"
-
+baseurl: ""
 kramdown:
   input: GFM # The default, can be omitted.
   syntax_highlighter: rouge
