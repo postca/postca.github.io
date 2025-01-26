@@ -47,7 +47,7 @@ pagination:
             <div class="blog-posts hfeed index-post-wrap" id="post-list">
               {% for post in paginator.posts %}
               <article class="blog-post hentry index-post post-{{ forloop.index0 }}">
-                <a class="entry-image-wrap is-image" href="{{ post.url | relative_url }}" title="{{ post.title }}">
+                <a class="entry-image-wrap is-image" href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">
                   {% if post.image %}
                   <span class="entry-thumb lazy-ify" style="background-image:url({{ post.image | relative_url }})"></span>
                   {% endif %}
@@ -55,7 +55,7 @@ pagination:
                 <div class="entry-header">
                   <span class="entry-category">{{ post.categories | join: ', ' }}</span>
                   <h2 class="entry-title">
-                    <a class="entry-title-link" href="{{ post.url | relative_url }}" rel="bookmark" title="{{ post.title }}">
+                    <a class="entry-title-link" href="{{ site.baseurl }}{{ post.url }}" rel="bookmark" title="{{ post.title }}">
                       {{ post.title }}
                     </a>
                   </h2>
