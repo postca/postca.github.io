@@ -18,7 +18,11 @@ authors:
     web: https://poztxa.github.io
     twitter: https://twitter.com/summerislive
     description: "Digital Creator, Musician, Host, and Gamer"
-    
+
+  pagination:
+  enabled: true
+  per_page: 5
+  
 plugins:
 - jekyll-paginate-v2
 - jekyll-auto-authors
